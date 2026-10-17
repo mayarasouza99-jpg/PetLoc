@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PetLoc Popular</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+
+</head>
+<body>
+<div class="container">
+
+  <!-- CABEÇALHO -->
+  <header class="site-header">
+    <a href="#" class="brand">
+      <img src="Imagens/logo.png" alt="Logo PetLoc" class="brand-logo">
+      <span class="brand-text">
+        <span class="brand-name">PetLoc</span>
+      </span>
+    </a>
+    <nav>
+      <a href="#loja">Loja</a>
+      <a href="#sensores">Sensores</a>
+      <a href="#agendar">Agendamento</a>
+      <a href="#sobre">Sobre a empresa</a>
+      <a href="#devs">Desenvolvedores</a>
+      <a href="#contato">Redes</a>
+    </nav>
+    <div class="header-actions">
+      <a href="#loja" class="btn btn-yellow" id="cart-btn">Carrinho (<span id="cart-count">0</span>)</a>
+      <a href="#agendar" class="btn btn-orange">Agendar consulta</a>
+    </div>
+  </header>
+
+  <!-- HERO / BANNER PRINCIPAL -->
+  <section class="hero">
+    <div>
+      <p class="pill">Pet shop · Clínica veterinária · Sensores</p>
+      <h1>Cuidado e tecnologia com <span>preço popular</span>.</h1>
+      <p>Consultas, loja completa e sensores de temperatura e GPS para você acompanhar seu pet de perto.</p>
+      <div class="hero-actions">
+        <a href="#agendar" class="btn btn-orange">Agendar consulta</a>
+        <a href="#sensores" class="btn btn-cyan">Ver sensores</a>
+      </div>
+    </div>
+    <div class="photo hero-photo">
+      <img src="Imagens/Tutor com pet.jpg" alt="Tutor com Pet" class="img-responsive">
+    </div>
+  </section>
+
+  <!-- LOJA DE PRODUTOS -->
+  <section id="loja">
+    <div class="shop-head">
+      <h2>Loja</h2>
+      <div class="chips">
+        <button type="button" class="chip" data-filter="racoes">Rações</button>
+        <button type="button" class="chip" data-filter="petiscos">Petiscos</button>
+        <button type="button" class="chip" data-filter="brinquedos">Brinquedos</button>
+        <button type="button" class="chip" data-filter="higiene">Higiene</button>
+        <button type="button" class="chip" data-filter="acessorios">Acessórios</button>
+      </div>
+    </div>
+    <div class="grid" id="products-grid">
+      
+      <!-- RAÇÕES (5 PRODUTOS) -->
+      <article class="card" data-category="racoes">
+        <div class="photo card-photo"><img src="Imagens/raçaoliva.jpg" alt="Ração 1" class="img-responsive"></div>
+        <div class="card-body">
+          <p class="card-cat">Rações</p>
+          <h3>Ração Liva Super Premium para Cães Adultos de Raças Médias - 10kg</h3>
+          <p class="price">R$ 115,00</p>
+          <button type="button" class="btn btn-ink add-to-cart">Adicionar</button>
+        </div>
+      </article>
+
+      <article class="card" data-category="racoes">
+        <div class="photo card-photo"><img src="Imagens/pedigree.jpg" alt="Ração 2" class="img-responsive"></div>
+        <div class="card-body">
+          <p class="card-cat">Rações</p>
+          <h3>Ração Seca Pedigree Carne e Vegetais para Cães Adultos Raças Pequenas e Minis - 7kg</h3>
+          <p class="price">R$ 98,00</p>
+          <button type="button" class="btn btn-ink add-to-cart">Adicionar</button>
+        </div>
+      </article>
+
+      <article class="card" data-category="racoes">
+        <div class="photo card-photo"><img src="Imagens/raçaosuprema.jpg" alt="Ração 3" class="img-responsive"></div>
+        <div class="card-body">
+          <p class="card-cat">Rações</p>
+          <h3>Ração Suprema Sabor Carne para Gatos Adultos - 10,1kg</h3>
+          <p class="price">R$ 120,00</p>
+          <button type="button" class="btn btn-ink add-to-cart">Adicionar</button>
+        </div>
+      </article>
+
+      <article class="card" data-category="racoes">
+        <div class="photo card-photo"><img src="Imagens/whiskas.jpg" alt="Ração 4" class="img-responsive"></div>
+        <div class="card-body">
+          <p class="card-cat">Rações</p>
+          <h3>Ração Seca Whiskas Superfoods para Gatos Filhotes sabor Salmão e Linhaça - 2,7kg</h3>
+          <p class="price">R$ 58,00</p>
+          <button type="button" class="btn btn-ink add-to-cart">Adicionar</button>
+        </div>
+      </article>
+
+      <article class="card" data-category="racoes">
+        <div class="photo card-photo"><img src="Imagens/golden.jpg" alt="Ração 5" class="img-responsive"></div>
+        <div class="card-body">
+          <p class="card-cat">Rações</p>
+          <h3>Ração Seca Golden Gatos Castrados Sênior Frango - 3kg</h3>
+          <p class="price">R$ 78,00</p>
+          <button type="button" class="btn btn-ink add-to-cart">Adicionar</button>
+        </div>
+      </article>
+
+      <!-- PETISCOS (5 PRODUTOS) -->
+      <article class="card" data-category="petiscos">
+        <div class="photo card-photo"><img src="Imagens/magnus.jpg" alt="Petisco 1" class="img-responsive"></div>
+        <div class="card-body">
+          <p class="card-cat">Petiscos</p>
+          <h3>Bifinho Magnus para Cães Adultos Sabor Carne - 500g</h3>
+          <p class="price">R$ 25,00</p>
+          <button type="button" class="btn btn-ink add-to-cart">Adicionar</button>
+        </div>
+      </article>
+
+      <article class="card" data-category="petiscos">
+        <div class="photo card-photo"><img src="Imagens/finotrato.png" alt="Petisco 2" class="img-responsive"></div>
+        <div class="card-body">
+          <p class="card-cat">Petiscos</p>
+          <h3>Bifinho Finotrato Carne para Cães - 500g</h3>
+          <p class="price">R$ 40,50</p>
+          <button type="button" class="btn btn-ink add-to-cart">Adicionar</button>
+        </div>
+      </article>
+
+      <article class="card" data-category="petiscos">
+        <div class="photo card-photo"><img src="Imagens/doogs.jpg" alt="Petisco 3" class="img-responsive"></div>
+        <div class="card-body">
+          <p class="card-cat">Petiscos</p>
+          <h3>Osso Doogs Super Premium para Cães Sabor Natural - 1kg</h3>
+          <p class="price">R$ 34,89</p>
+          <button type="button" class="btn btn-ink add-to-cart">Adicionar</button>
+        </div>
+      </article>
+
+      <article class="card" data-category="petiscos">
+        <div class="photo card-photo"><img src="Imagens/truecreamy.jpg" alt="Petisco 4" class="img-responsive"></div>
+        <div class="card-body">
+          <p class="card-cat">Petiscos</p>
+          <h3>Petisco Cremoso True Creamy Sabor Frango para Gatos - 5un</h3>
+          <p class="price">R$ 20,42</p>
+          <button type="button" class="btn btn-ink add-to-cart">Adicionar</button>
+        </div>
+      </article>
+
+      <article class="card" data-category="petiscos">
+        <div class="photo card-photo"><img src="Imagens/petiscowhiskas.jpg" alt="Petisco 5" class="img-responsive"></div>
+        <div class="card-body">
+          <p class="card-cat">Petiscos</p>
+          <h3>Petisco Whiskas Temptations Anti Bola de Pelo Para Gatos Adultos - 4un</h3>
+          <p class="price">R$ 42,98</p>
+          <button type="button" class="btn btn-ink add-to-cart">Adicionar</button>
+        </div>
+      </article>
+
+      <!-- BRINQUEDOS (5 PRODUTOS) -->
+      <article class="card" data-category="brinquedos">
+        <div class="photo card-photo"><img src="Imagens/mordedorosso.jpg" alt="Brinquedo 1" class="img-responsive"></div>
+        <div class="card-body">
+          <p class="card-cat">Brinquedos</p>
+          <h3>Brinquedo Mordedor Kroco Osso para Cães</h3>
+          <p class="price">R$ 14,90</p>
+          <button type="button" class="btn btn-ink add-to-cart">Adicionar</button>
+        </div>
+      </article>
+
+      <article class="card" data-category="brinquedos">
+        <div class="photo card-photo"><img src="Imagens/bolinhavermelha.jpg" alt="Brinquedo 2" class="img-responsive"></div>
+        <div class="card-body">
+          <p class="card-cat">Brinquedos</p>
+          <h3>Brinquedo Kroco Bolinha Vermelho para Cães</h3>
+          <p class="price">R$ 24,72</p>
+          <button type="button" class="btn btn-ink add-to-cart">Adicionar</button>
+        </div>
+      </article>
+
+      <article class="card" data-category="brinquedos">
+        <div class="photo card-photo"><img src="Imagens/macaco.jpg" alt="Brinquedo 3" class="img-responsive"></div>
+        <div class="card-body">
+          <p class="card-cat">Brinquedos</p>
+          <h3>Brinquedo Kroco Pelúcia Macaco</h3>
+          <p class="price">R$ 26,32</p>
+          <button type="button" class="btn btn-ink add-to-cart">Adicionar</button>
+        </div>
+      </article>
+
+      <article class="card" data-category="brinquedos">
+        <div class="photo card-photo"><img src="Imagens/abacate.jpg" alt="Brinquedo 4" class="img-responsive"></div>
+        <div class="card-body">
+          <p class="card-cat">Brinquedos</p>
+          <h3>Brinquedo Chalesco Abacate Catnip</h3>
+          <p class="price">R$ 12,20</p>
+          <button type="button" class="btn btn-ink add-to-cart">Adicionar</button>
+        </div>
+      </article>
+
+      <article class="card" data-category="brinquedos">
+        <div class="photo card-photo"><img src="Imagens/ratinho.jpg" alt="Brinquedo 5" class="img-responsive"></div>
+        <div class="card-body">
+          <p class="card-cat">Brinquedos</p>
+          <h3>Brinquedo de Vinil LCM Ratinho Luxo Laranja</h3>
+          <p class="price">R$ 7,52</p>
+          <button type="button" class="btn btn-ink add-to-cart">Adicionar</button>
+        </div>
+      </article>
+
+      <!-- HIGIENE (5 PRODUTOS) -->
+      <article class="card" data-category="higiene">
+        <div class="photo card-photo"><img src="Imagens/tapeteconfort.jpg" alt="Higiene 1" class="img-responsive"></div>
+        <div class="card-body">
+          <p class="card-cat">Higiene</p>
+          <h3>Tapete Higienico Confort Pads 60 cm - 7un</h3>
+          <p class="price">R$ 15,90</p>
+          <button type="button" class="btn btn-ink add-to-cart">Adicionar</button>
+        </div>
+      </article>
+
+      <article class="card" data-category="higiene">
+        <div class="photo card-photo"><img src="Imagens/shampoo.jpg" alt="Higiene 2" class="img-responsive"></div>
+        <div class="card-body">
+          <p class="card-cat">Higiene</p>
+          <h3>Shampoo World Veterinária Dug's Clorexidina Cães & Gatos</h3>
+          <p class="price">R$ 36,18</p>
+          <button type="button" class="btn btn-ink add-to-cart">Adicionar</button>
+        </div>
+      </article>
+
+      <article class="card" data-category="higiene">
+        <div class="photo card-photo"><img src="Imagens/areia.jpg" alt="Higiene 3" class="img-responsive"></div>
+        <div class="card-body">
+          <p class="card-cat">Higiene</p>
+          <h3>Areia Sanitária Meau Grãos Finos para Gatos - 12kg</h3>
+          <p class="price">R$ 48,47</p>
+          <button type="button" class="btn btn-ink add-to-cart">Adicionar</button>
+        </div>
+      </article>
+
+      <article class="card" data-category="higiene">
+        <div class="photo card-photo"><img src="Imagens/antiodor.jpg" alt="Higiene 4" class="img-responsive"></div>
+        <div class="card-body">
+          <p class="card-cat">Higiene</p>
+          <h3>Aditivo Antiodor Kelco Pipicat Campestre</h3>
+          <p class="price">R$ 15,00</p>
+          <button type="button" class="btn btn-ink add-to-cart">Adicionar</button>
+        </div>
+      </article>
+
+      <article class="card" data-category="higiene">
+        <div class="photo card-photo"><img src="Imagens/alicate.jpg" alt="Higiene 5" class="img-responsive"></div>
+        <div class="card-body">
+          <p class="card-cat">Higiene</p>
+          <h3>Alicate de Unhas Guilhotina The Pets Brasil Vermelho</h3>
+          <p class="price">R$ 30,45</p>
+          <button type="button" class="btn btn-ink add-to-cart">Adicionar</button>
+        </div>
+      </article>
+
+      <!-- ACESSÓRIOS (5 PRODUTOS) -->
+      <article class="card" data-category="acessorios">
+        <div class="photo card-photo"><img src="Imagens/peitoral.jpg" alt="Acessório 1" class="img-responsive"></div>
+        <div class="card-body">
+          <p class="card-cat">Acessórios</p>
+          <h3>Peitoral Tradicional Meau Duo Rosa Chiclete</h3>
+          <p class="price">R$ 18,85</p>
+          <button type="button" class="btn btn-ink add-to-cart">Adicionar</button>
+        </div>
+      </article>
+
+      <article class="card" data-category="acessorios">
+        <div class="photo card-photo"><img src="Imagens/comedouro.png" alt="Acessório 2" class="img-responsive"></div>
+        <div class="card-body">
+          <p class="card-cat">Acessórios</p>
+          <h3>Comedouro Duplo Elevado de Cerâmica Meau Clássico para Cães e Gatos</h3>
+          <p class="price">R$ 72,50</p>
+          <button type="button" class="btn btn-ink add-to-cart">Adicionar</button>
+        </div>
+      </article>
+
+      <article class="card" data-category="acessorios">
+        <div class="photo card-photo"><img src="Imagens/caminha.jpg" alt="Acessório 3" class="img-responsive"></div>
+        <div class="card-body">
+          <p class="card-cat">Acessórios</p>
+          <h3>Cama Nuvem Meau Brigadeiro Rosa</h3>
+          <p class="price">R$ 88,00</p>
+          <button type="button" class="btn btn-ink add-to-cart">Adicionar</button>
+        </div>
+      </article>
+
+      <article class="card" data-category="acessorios">
+        <div class="photo card-photo"><img src="Imagens/arranhador.jpg" alt="Acessório 4" class="img-responsive"></div>
+        <div class="card-body">
+          <p class="card-cat">Acessórios</p>
+          <h3>Brinquedo Arranhador Meau Duo para Gatos</h3>
+          <p class="price">R$ 70,00</p>
+          <button type="button" class="btn btn-ink add-to-cart">Adicionar</button>
+        </div>
+      </article>
+
+      <article class="card" data-category="acessorios">
+        <div class="photo card-photo"><img src="Imagens/cinto.jpg" alt="Acessório 5" class="img-responsive"></div>
+        <div class="card-body">
+          <p class="card-cat">Acessórios</p>
+          <h3>Cinto de Segurança Simples Mosquetão - Preto</h3>
+          <p class="price">R$ 17,94</p>
+          <button type="button" class="btn btn-ink add-to-cart">Adicionar</button>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- SEÇÃO PRODUTOS COM SENSORES -->
+  <section class="band" id="sensores">
+    <div class="sensor-header">
+      <div>
+        <h2>Produtos com sensores</h2>
+        <p>Sensores de temperatura e GPS para acompanhar a saúde e a localização do seu pet.</p>
+      </div>
+      <div class="carousel-nav">
+        <button type="button" class="arrow-btn" id="prev-sensor" aria-label="Anterior">&larr;</button>
+        <button type="button" class="arrow-btn" id="next-sensor" aria-label="Próximo">&rarr;</button>
+      </div>
+    </div>
+
+    <div class="sensor-carousel">
+      <div class="sensor-page active" id="sensor-page-1">
+        <div class="grid grid-sensors">
+          <article class="sensor-card" style="background:#FFD400">
+            <p class="tag">Sensor: GPS</p>
+            <div class="photo sensor-photo">
+              <img src="Imagens/coleiragps.jpg" alt="Coleira GPS" class="img-responsive">
+            </div>
+            <h3>Coleira com GPS</h3>
+            <p class="price">R$ 258,00</p>
+            <button type="button" class="btn btn-ink full-width add-to-cart">Adicionar</button>
+          </article>
+
+          <article class="sensor-card" style="background:#00AFCB">
+            <p class="tag">Sensor: GPS</p>
+            <div class="photo sensor-photo">
+              <img src="Imagens/plaquinha.jpg" alt="Plaquinha Rastreadora" class="img-responsive">
+            </div>
+            <h3>Plaquinha rastreadora</h3>
+            <p class="price">R$ 48,00</p>
+            <button type="button" class="btn btn-ink full-width add-to-cart">Adicionar</button>
+          </article>
+        </div>
+      </div>
+
+      <div class="sensor-page" id="sensor-page-2">
+        <div class="grid grid-sensors">
+          <article class="sensor-card" style="background:#FFB38A">
+            <p class="tag">Sensor: Temperatura</p>
+            <div class="photo sensor-photo">
+              <img src="Imagens/caixadetransporte.jpg" alt="Caixa de Transporte com Sensor de Temperatura" class="img-responsive">
+            </div>
+            <h3>Caixa de Transporte com Sensor de Temperatura</h3>
+            <p class="price">R$ 300,00</p>
+            <button type="button" class="btn btn-ink full-width add-to-cart">Adicionar</button>
+          </article>
+
+          <article class="sensor-card" style="background:#CFF3F9">
+            <p class="tag">Sensor: Peso</p>
+            <div class="photo sensor-photo">
+              <img src="Imagens/comedourosensor.jpg" alt="Comedouro com Sensor" class="img-responsive">
+            </div>
+            <h3>Comedouro com sensor</h3>
+            <p class="price">R$ 332,00</p>
+            <button type="button" class="btn btn-ink full-width add-to-cart">Adicionar</button>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULÁRIO DE AGENDAMENTO -->
+  <section class="booking" id="agendar">
+    <div>
+      <h2>Agendamento de consulta</h2>
+      <p>Preencha os dados e entramos em contato para confirmar o horário. Consultas com preço acessível.</p>
+    </div>
+    <div>
+      <form id="booking-form" class="form-grid" novalidate>
+        <label class="field">Nome do tutor
+          <input type="text" id="tutor" autocomplete="name"><span class="error" id="err-tutor"></span></label>
+        <label class="field">Telefone / WhatsApp
+          <input type="tel" id="tel" autocomplete="tel" placeholder="(11) 99999-9999"><span class="error" id="err-tel"></span></label>
+        <label class="field">Nome do pet
+          <input type="text" id="pet"><span class="error" id="err-pet"></span></label>
+        <label class="field">Espécie
+          <select id="especie"><option>Cachorro</option><option>Gato</option><option>Outro</option></select></label>
+        <label class="field">Serviço
+          <select id="servico"><option>Consulta</option><option>Vacina</option><option>Exames</option><option>Banho e tosa</option></select></label>
+        <label class="field">Data
+          <input type="date" id="data"><span class="error" id="err-data"></span></label>
+        <label class="field">Horário
+          <input type="time" id="hora"><span class="error" id="err-hora"></span></label>
+        <button type="submit" class="btn btn-ink">Solicitar agendamento</button>
+      </form>
+      <div class="confirm" id="confirm" hidden>
+        <h3>Pedido enviado!</h3>
+        <p id="summary"></p>
+        <button type="button" class="btn btn-ink" id="new-booking">Novo agendamento</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE A EMPRESA -->
+  <section class="about" id="sobre">
+    <div class="photo about-photo">
+      <img src="Imagens/fachada.jpg" alt="Sobre a PetLoc" class="img-responsive">
+    </div>
+    <div>
+      <h2>Sobre a PetLoc</h2>
+      <p class="about-description">A PetLoc é uma empresa criada em 2026, com foco no desenvolvimento de soluções tecnológicas acessíveis para a localização e segurança de animais de estimação. A empresa oferece a inovadora proposta de utilizar dispositivos localizadores com GPS, permitindo que os tutores acompanhem em tempo real a localização de seus pets.
+
+Com o compromisso de tornar a tecnologia e o cuidado animal acessíveis a todos, a PetLoc prioriza preços populares, garantindo que a segurança de alta performance não seja um privilégio, mas uma realidade para qualquer família. Seu objetivo é proporcionar mais tranquilidade, praticidade e proteção no dia a dia, contribuindo diretamente para a prevenção de perdas e o bem-estar dos pets de forma justa e inclusiva.</p>
+      
+      <div class="values">
+        <div class="value" style="background:#FFF1A8">
+          <strong>Missão</strong><br>Proporcionar segurança, saúde e praticidade para os pets e seus tutores através de tecnologia inovadora e atendimento veterinário com preço popular e acessível.
+        </div>
+        <div class="value" style="background:#CFF3F9">
+          <strong>Visão</strong><br>Ser referência nacional em pet shop e clínica veterinária integrada à tecnologia, tornando o rastreamento e o cuidado preventivo de animais de estimação uma realidade ao alcance de todos.
+        </div>
+        <div class="value" style="background:#FFD9C4">
+          <strong>Valores</strong><br>Democratizamos o acesso ao cuidado animal combinando alta tecnologia com preços populares, guiados pela inovação útil, pela transparência no atendimento e pelo compromisso inegociável com o amor, respeito e bem-estar de cada pet.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOTOS DA EMPRESA -->
+  <section>
+    <h2>Conheça nosso espaço</h2>
+    <p class="section-sub">Fotos da nossa clínica, loja e instalações.</p>
+    <div class="grid grid-gallery">
+      <div class="photo gallery-item">
+        <img src="Imagens/recepção.jpg" alt="Recepção" class="img-responsive">
+      </div>
+      <div class="photo gallery-item">
+        <img src="Imagens/consultorio.jpg" alt="Consultório" class="img-responsive">
+      </div>
+      <div class="photo gallery-item">
+        <img src="caminho/para/loja.jpg" alt="Loja" class="img-responsive">
+      </div>
+      <div class="photo gallery-item">
+        <img src="caminho/para/equipe.jpg" alt="Equipe" class="img-responsive">
+      </div>
+    </div>
+  </section>
+
+  <!-- DESENVOLVEDORES (8 PESSOAS) -->
+  <section id="devs">
+    <h2>Desenvolvedores do site</h2>
+    <p class="section-sub">Equipe responsável pela criação e desenvolvimento do projeto.</p>
+    <div class="grid grid-devs">
+      <article class="dev">
+        <div class="photo dev-photo">
+          <img src="caminho/para/dev1.jpg" alt="Desenvolvedor 1" class="img-responsive avatar">
+        </div>
+        <h3>[NOME 1]</h3>
+        <p>[FUNÇÃO]</p>
+      </article>
+
+      <article class="dev">
+        <div class="photo dev-photo">
+          <img src="caminho/para/dev2.jpg" alt="Desenvolvedor 2" class="img-responsive avatar">
+        </div>
+        <h3>[NOME 2]</h3>
+        <p>[FUNÇÃO]</p>
+      </article>
+
+      <article class="dev">
+        <div class="photo dev-photo">
+          <img src="caminho/para/dev3.jpg" alt="Desenvolvedor 3" class="img-responsive avatar">
+        </div>
+        <h3>[NOME 3]</h3>
+        <p>[FUNÇÃO]</p>
+      </article>
+
+      <article class="dev">
+        <div class="photo dev-photo">
+          <img src="caminho/para/dev4.jpg" alt="Desenvolvedor 4" class="img-responsive avatar">
+        </div>
+        <h3>[NOME 4]</h3>
+        <p>[FUNÇÃO]</p>
+      </article>
+
+      <article class="dev">
+        <div class="photo dev-photo">
+          <img src="caminho/para/dev5.jpg" alt="Desenvolvedor 5" class="img-responsive avatar">
+        </div>
+        <h3>[NOME 5]</h3>
+        <p>[FUNÇÃO]</p>
+      </article>
+
+      <article class="dev">
+        <div class="photo dev-photo">
+          <img src="caminho/para/dev6.jpg" alt="Desenvolvedor 6" class="img-responsive avatar">
+        </div>
+        <h3>[NOME 6]</h3>
+        <p>[FUNÇÃO]</p>
+      </article>
+
+      <article class="dev">
+        <div class="photo dev-photo">
+          <img src="caminho/para/dev7.jpg" alt="Desenvolvedor 7" class="img-responsive avatar">
+        </div>
+        <h3>[NOME 7]</h3>
+        <p>[FUNÇÃO]</p>
+      </article>
+
+      <article class="dev">
+        <div class="photo dev-photo">
+          <img src="caminho/para/dev8.jpg" alt="Desenvolvedor 8" class="img-responsive avatar">
+        </div>
+        <h3>[NOME 8]</h3>
+        <p>[FUNÇÃO]</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer id="contato">
+    <div class="footer-cols">
+      <div><span class="footer-brand">PetLoc Popular</span><br>[ENDEREÇO]</div>
+      <div><strong>Horários</strong><br>Loja: [HORÁRIO]<br>Clínica: [HORÁRIO]</div>
+      <div><strong>Contato</strong><br>[TELEFONE] · [WHATSAPP]<br>[E-MAIL]</div>
+      <div><strong>Urgência</strong><br>[TELEFONE / PLANTÃO]</div>
+    </div>
+    <div class="footer-social">
+      <strong>Siga a PetLoc Popular</strong>
+      <div class="socials">
+        <a href="#" class="social">Instagram<br>@[USUÁRIO]</a>
+        <a href="#" class="social">Facebook<br>/[USUÁRIO]</a>
+        <a href="#" class="social">WhatsApp<br>[TELEFONE]</a>
+        <a href="#" class="social">YouTube<br>/[CANAL]</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
